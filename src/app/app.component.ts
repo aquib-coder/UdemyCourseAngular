@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'testAngular';
   name="testAngular"
+  getVal()
+  {
+    if(this.name=='aquib')
+    return true;
+    else return false;
+  }
 }

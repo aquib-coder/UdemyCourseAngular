@@ -1,2 +1,7 @@
 <input type="text" [(ngModel)]="name">
 <p [innerText]="name"></p>
+<p *ngIf="getVal();else noServer">
+This is my name  </p>
+<ng-template #noServer>
+  <p>This is not my name</p>
+</ng-template>
