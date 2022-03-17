@@ -7,7 +7,9 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-recipes:Recipe[]=[]
+recipes:Recipe[]=[
+  new Recipe('A test recipe','This is simply a test','https://img.delicious.com.au/ZCVFCYn_/del/2022/02/chicken-chickpea-curry-163942-1.jpg')
+]
   constructor() { }
 
   ngOnInit(): void {
