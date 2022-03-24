@@ -7,10 +7,13 @@
     
     <hr>
     <div class="row">
-        <div class="col-xs-12">           
-            <app-recipe-item *ngFor="let r of recipes" 
-            [recipeItem]="r"
-            (recipeSelectedOutput)="OnRecipeListSelected(r)"></app-recipe-item>
+        <div class="col-xs-12">
+            <!---->
+            <app-recipe-item
+             *ngFor="let r of recipes"
+              [recipe]="r"
+              (recipeSelected)="OnRecipeSelected(r)"
+              ></app-recipe-item>
         </div>
     </div>
 </div>

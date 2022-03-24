@@ -7,9 +7,8 @@ import { Recipe } from './recipe.model';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent implements OnInit {
-  selectedRecipeOnRecipeComp:Recipe;
+  selectedRecipe:Recipe;
   constructor() { }
-
   ngOnInit(): void {
   }
 
