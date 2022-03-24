@@ -6,12 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'testAngular';
-  name="testAngular"
-  getVal()
-  {
-    if(this.name=='aquib')
-    return true;
-    else return false;
-  }
+  selectedFeature:string;
 }
