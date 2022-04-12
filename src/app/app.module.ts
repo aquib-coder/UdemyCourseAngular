@@ -12,6 +12,8 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
+import { DropdownDirective } from './Shared/dropdown.directive';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { MainComponent } from './main/main.component';
     HeaderComponent,
     LoginComponent,
     MainComponent
+   // DropdownDirective
   ],
   imports: [
     BrowserModule,
