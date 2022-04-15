@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, RequiredValidator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,19 +10,14 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 @ViewChild('user') user:ElementRef;
 @ViewChild('pwd') pwd:ElementRef;
-  constructor(private router:Router) { }
-
+  constructor(private router:Router,private formBuilder:FormBuilder) { }
+public loginForm=this.formBuilder.group({
+  email:['',Validators.required,Validators.email],
+  password:['',Validators.required]
+})
   ngOnInit(): void {
   }
-  login( ){
-    var u=this.user.nativeElement.value;
-    var p=this.pwd.nativeElement.value;
-    if(u!=null && p!=null){
-      alert("Logged in successfully");
-      localStorage.setItem('token','123456789');
-      u=='atif9087@gmail.com'?localStorage.setItem('userType','admin'):localStorage.setItem('userType','employee');
-this.router.navigate(['main']);
+  OnSubmit( ){
+   console.log("on submit");
     }
   }
-
-}

@@ -12,7 +12,8 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
-import { DropdownDirective } from './Shared/dropdown.directive';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -26,13 +27,15 @@ import { DropdownDirective } from './Shared/dropdown.directive';
     ShoppingEditComponent,
     HeaderComponent,
     LoginComponent,
-    MainComponent
+    MainComponent,
+    RegisterComponent
    // DropdownDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
