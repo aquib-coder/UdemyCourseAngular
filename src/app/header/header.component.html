@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#" (click)="OnSelect('recipe')">Recipes </a>
+          <a class="nav-link" [routerLink]="['recipe']" >Recipes </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="OnSelect('shopping-list')">Shopping List</a>
+          <a class="nav-link"[routerLink]="['shopping']" > Shopping List</a>
         </li>
         <li class="nav-item dropdown" >
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -20,7 +20,10 @@
             <a class="dropdown-item" href="#">Save Data</a>
             <a class="dropdown-item" href="#">Fetch Data</a>
           </div>
-        </li>        
+        </li>     
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['user']" >Users</a>
+        </li>   
       </ul>
       
         <input    style="margin-left: 67%;" class="form-control " type="search" placeholder="Search" aria-label="Search"><span> <button class="btn btn-outline-success " type="submit">Search</button></span>
